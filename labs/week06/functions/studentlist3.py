@@ -22,6 +22,11 @@ def readModules():
  modules = []
  moduleName = input("\tEnter the first Module name (blank to quit) :").strip()
 
+ def displayModules(modules):
+    print ("\tName \tGrade")
+    for module in modules:
+        print("\t{} \t{}".format(module["name"], module["grade"])) 
+
  while moduleName != "":
     module = {}
     module["name"]= moduleName
@@ -33,8 +38,9 @@ def readModules():
  return modules
 
 def doView(students):
- # we fill this in later
- print(students)
+    for currentStudent in students:
+        print(currentStudent["name"])
+        displayModules(currentStudent["modules"]);
 
 #main program
 students = []
