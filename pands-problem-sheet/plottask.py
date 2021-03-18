@@ -11,10 +11,10 @@ xpoints = np.array(range(0,5))
 ypoints = xpoints  #multiply each entry by itself
 
 #xpoints = np.array(range(0,5))
-ypoints2 = xpoints * xpoints #multiply each entry by itself
+ypoints2 = xpoints * xpoints #multiply each entry by itself squared
 
 #xpoints = np.array(range(0,5))
-ypoints3 = xpoints * xpoints* xpoints #multiply each entry by itself
+ypoints3 = xpoints * xpoints* xpoints #multiply each entry by itself cubed
 
 plt.plot(xpoints, ypoints, color= 'r',label = "x ")
 plt.plot(xpoints, ypoints2, color= 'b',label = "x squared")
