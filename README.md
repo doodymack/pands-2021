@@ -7,8 +7,8 @@ Project: Make a project that will analyse the iris data set, this project is wor
 Initial project plan:
 
 Week1: 
-1. Reseaarch Iris Dataset
-2. Get Iris DataSet (download to readme)
+1. Reseaarch Iris Dataset- complete
+2. Get Iris DataSet (download to readme) -complete
 3. Research websites/forums on ways to analyze the dataset
 4. Decision on final plan: MyAnalysis Plan- what attributes will be analysed/ how it will be presented/what histograms/ what are x & y for scattterplots (loook for correlations)
 5. Research examples of python code to analyse data (Fisher data set or similar), code repositories, python forums
