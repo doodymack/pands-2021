@@ -9,27 +9,29 @@ Initial project plan:
 Week1: 
 1. Reseaarch Iris Dataset- complete
 2. Get Iris DataSet (download to readme) -complete
-3. Research websites/forums on ways to analyze the dataset
-4. Decision on final plan: MyAnalysis Plan- what attributes will be analysed/ how it will be presented/what histograms/ what are x & y for scattterplots (loook for correlations)
-5. Research examples of python code to analyse data (Fisher data set or similar), code repositories, python forums
+3. Research PANDAS- do the week 11. Research external sources
+4. Create a test file similar to fisdher data set and start tp 'play' with it- record learnings for readme
+5. Research websites/forums on ways to analyze the dataset
+6. Decision on final plan: MyAnalysis Plan- what attributes will be analysed/ how it will be presented/what histograms/ what are x & y for scattterplots (loook for correlations)
+7. Research examples of python code to analyse data (Fisher data set or similar), code repositories, python forums
 Week 2:
-6. Begin writing the code:
-7. Pull the data set to VSC file (text file?)
-8. Write program to error check
-9. Create a simpler dasta set file to check
-10. Write program to:
-11. pull the data set
-12. Write python program to define: analyse the data
+8. Begin writing the code:
+9. Pull the data set to VSC file (text file?)
+10. Write program to error check
+11. Create a simpler dasta set file to check
+12. Write program to:
+13. pull the data set
+14. Write python program to define: analyse the data
 Week 3:
-13. Write python program to create histograms
-14. Write python program to create scatter=plots
-15. Run program
-16. Degbug
+15. Write python program to create histograms
+16. Write python program to create scatter=plots
+17. Run program
+18. Degbug
 Week 4: 
-17. Look for ways to make code more elegant
-18. Create screenshots of histograms/scatterplots
-19. Paste screenshots to repository 
-20. Update ReadMe file
+19. Look for ways to make code more elegant
+20. Create screenshots of histograms/scatterplots
+21. Paste screenshots to repository 
+22. Update ReadMe file
 Week 5: comntingency
 
 
