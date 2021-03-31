@@ -19,20 +19,20 @@ listDAta= [
     ['John', 'Math', ],
     ['John', 'programming', 61],
     ['John', 'programming', 61],
-
 ]
 
-df = pd.DataFrame(listDAta, columns=['name','subject','grade'])
+df = pd.DataFrame(listDAta, columns=['Name','Subject','grade'])
+
 print(df.head(3))
 
-print(df.describe())
-print(type(df.describe()))
+#print(df.describe())
+#print(type(df.describe()))
 
 # writing to files
 path = "./data/"
-csvFilename = path + 'grades1.csv'
+csvFilename = path + 'grades.csv'
 df.to_csv(csvFilename)
-
+'''
 excelFilename = path +'grades.xlsx'
 df.to_excel(excelFilename, index=False, sheet_name='data')
 with pd.ExcelWriter(excelFilename, engine='openpyxl', mode='a') as writer:
@@ -43,4 +43,4 @@ mean =  df.describe().loc['mean','grade']
 print(mean)
 # or
 mean = df['grade'].mean()
-print (mean)
+print (mean)'''
