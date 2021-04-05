@@ -9,16 +9,17 @@ Initial project plan:
 Week1: 
 1. Reseaarch Iris Dataset- complete
 2. Get Iris DataSet (download to readme) -complete
-3. Research PANDAS- do the week 11. Research external sources
-4. Create a test file similar to fisdher data set and start tp 'play' with it- record learnings for readme
-5. Research websites/forums on ways to analyze the dataset
+3. Research PANDAS- do the week 11. Research external sources-complete
+4. Create a test file similar to fisdher data set and start tp 'play' with it- record learnings for readme -ongoing
+5. Research websites/forums on ways to analyze the dataset- ongoing
 6. Decision on final plan: MyAnalysis Plan- what attributes will be analysed/ how it will be presented/what histograms/ what are x & y for scattterplots (loook for correlations)
-7. Research examples of python code to analyse data (Fisher data set or similar), code repositories, python forums
+7. Research examples of python code to analyse data (Fisher data set or similar), code repositories, python forums- 05 Apr- ongoing .  reference file created
 Week 2:
-8. Begin writing the code:
+8. Begin writing the code: -05 Apr started.
 9. Pull the data set to VSC file (text file?)
 10. Write program to error check
-11. Create a simpler dasta set file to check
+11. Create a simpler dacd
+ta set file to check
 12. Write program to:
 13. pull the data set
 14. Write python program to define: analyse the data
