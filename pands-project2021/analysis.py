@@ -39,7 +39,7 @@ iris_versicolor=df.loc[df["type"]=="Iris-versicolor"]
 
 #In order to convert a certain Python object (dictionary, lists etc) the basic command is:
 #pd.DataFrame()
-
+'''
 print("First five rows")
 print(df.head())
 print("*********")
@@ -55,11 +55,12 @@ print(df.describe())
 
 
 #df.head(5)
-#df.info()
-#df.mean()#Returns the mean of all columns
-#df.corr()#Returns the correlation between columns in a data frame
-#df.count()#Returns the number of non-null values in each data frame column
-#df.max()#Returns the highest value in each column
-#df.min()#Returns the lowest value in each column
-#df.median()#Returns the median of each column
-#df.std()#Returns the standard deviation of each column
+df.info()'''
+df.mean()#Returns the mean of all columns
+df.corr()#Returns the correlation between columns in a data frame
+df.count()#Returns the number of non-null values in each data frame column
+df.max()#Returns the highest value in each column
+df.min()#Returns the lowest value in each column
+df.median()#Returns the median of each column
+df.std()#Returns the standard deviation of each column
+print ("Hello")
