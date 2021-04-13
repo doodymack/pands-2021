@@ -6,6 +6,7 @@
 # simple if else
 # found some options on stackoverflow:  
 # https://stackoverflow.com/questions/45870820/how-to-check-if-today-is-monday-in-python
+# https://www.w3schools.com/python/python_datetime.asp
 
 from datetime import date
 
