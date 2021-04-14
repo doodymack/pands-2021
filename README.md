@@ -1,5 +1,7 @@
 # pands-2021
 this is my read me file
+#The readme file.#For telling users what this repository is for.You will need to do more work on this.
+
 
 Project: Make a project that will analyse the iris data set, this project is worth 50% of your grade for this course.
 
