@@ -1,5 +1,5 @@
 # weekday.py
-# author: Psul Mc Grath
+# author: Paul Mc Grath
 # simple programe that reads in the date
 # if its a weekday it prints one command
 # if its Sat or Sun it prints out another command

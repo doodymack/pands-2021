@@ -3,6 +3,38 @@ this is my read me file
 #The readme file.#For telling users what this repository is for.You will need to do more work on this.
 
 
+List of references used in the weekly problems and general further reading from weekly lectures and labs (Note- 'Automate the boring stuff with Python' was printed -all 480 pages enabled by work printer-I found this a good read when sick of screentime and/or internet is down):
+
+weekday.py:
+https://stackoverflow.com/questions/45870820/how-to-check-if-today-is-monday-in-python
+https://www.w3schools.com/python/python_datetime.asp
+ 
+squareroot.py
+https://www.geeksforgeeks.org/find-root-of-a-number-using-newtons-method/#:~:text=Let%20N%20be%20any%20number,correct%20square%20root%20of%20N.
+
+secondstring.py
+https://www.w3schools.com/python/python_howto_reverse_string.asp
+https://stackoverflow.com/questions/20847205/program-to-extract-every-alternate-letters-from-a-string-in-python/20847220
+
+pythoncollatz.py
+https://www.sanfoundry.com/python-program-test-collatz-conjecture-given-number/
+
+How_Many_E.py
+https://www.geeksforgeeks.org/count-the-number-of-times-a-letter-appears-in-a-text-file-in-python/
+https://pythonexamples.org/python-count-number-of-characters-in-text-file/
+
+plottask.py
+https://www.w3schools.com/python/matplotlib_plotting.asp
+https://realpython.com/python-matplotlib-guide/
+https://matplotlib.org/stable/
+https://github.com/matplotlib/cheatsheets#cheatsheets
+https://github.com/pandas-dev/pandas
+
+
+
+PROJECT PAGES:
+
+CD..#
 Project: Make a project that will analyse the iris data set, this project is worth 50% of your grade for this course.
 
 

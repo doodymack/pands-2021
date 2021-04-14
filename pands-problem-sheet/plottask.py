@@ -4,6 +4,11 @@
 # in a nice looking plot
 #https://www.w3schools.com/python/matplotlib_plotting.asp
 # https://realpython.com/python-matplotlib-guide/
+#https://matplotlib.org/stable/
+# https://github.com/matplotlib/cheatsheets#cheatsheets
+#https://github.com/pandas-dev/pandas
+
+
 
 
 import matplotlib.pyplot as plt #imports matplotlib module renameit as "plt"

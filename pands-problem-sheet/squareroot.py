@@ -7,6 +7,8 @@
 #Newton’s Method:
 # Let N be any number then the square root of N can be given by the formula:
 # root = 0.5 * (X + (N / X)) where X is any guess which can be assumed to be N or 1.
+# https://www.geeksforgeeks.org/find-root-of-a-number-using-newtons-method/#:~:text=Let%20N%20be%20any%20number,correct%20square%20root%20of%20N.
+
 
 
 #In the above formula, X is any assumed square root of N and root is the correct square root of N.
