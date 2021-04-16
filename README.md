@@ -1,6 +1,6 @@
 # pands-2021
 this is my read me file
-#The readme file.#For telling users what this repository is for.You will need to do more work on this.
+#The readme file.#For telling users what this repository is for.
 
 
 List of references used in the weekly problems and general further reading from weekly lectures and labs (Note- 'Automate the boring stuff with Python' was printed -all 480 pages enabled by work printer-I found this a good read when sick of screentime and/or internet is down):
