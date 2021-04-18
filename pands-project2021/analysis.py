@@ -33,6 +33,8 @@ iris_versicolor=df.loc[df["type"]=="Iris-versicolor"]
 #plt.show()
 
 
+
+
 #You would give the path, filename etc inside the parenthesis
 # Inside the parenthesis you can also pass different arguments that relate to how to open the file.
 

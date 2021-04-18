@@ -78,8 +78,7 @@ pd.isnull()
 #which checks for null Values, and returns a boolean array#
 # (an array of true for missing values and false for non-missing values).
 #  In order to get a sum of null/missing values, run#
-pd.isnull().sum(). pd.notnull() #is the opposite of
-pd.isnull()
+pd.isnull().sum(). pd.notnull() #is the opposite of pd.isnull()
 #After you get a list of missing values you can get rid of them, or drop them by using
 df.dropna()
 # to drop the rows or#
@@ -108,3 +107,60 @@ df.concat([df1, df2],axis=1) # add the columns in df1 to the end of df2 (rows sh
 df1.join(df2,on=col1,how='inner') # SQL-style join the columns in df1
 #with the columns on df2 where the rows for colhave identical values.
 #  how can be equal to one of: 'left', 'right', 'outer', 'inner'
+
+#from weekly tasks the following might be useful for plotting
+# you can plot as many lines as you like by simply adding more plt.plot() functions:
+#plt.plot(xpoints, ypoints, marker = '^', color= 'r',label = "x ")
+#plt.plot(xpoints, ypoints2, marker = 'v', color= 'b', ls = '--', label = "x squared")
+#plt.plot(xpoints, ypoints3, marker = 'D', color= 'g', ls = ':',label = "x cubed")
+
+#scatter plots
+# https://www.w3schools.com/python/matplotlib_scatter.asp
+# plt.scatter(x, y, color = '#88c999')
+# plt.show()
+
+
+# correlations using matplotlib & numpy: 
+
+# x = numpy.std(y)
+#print(x)
+
+
+# LinearRegression:
+
+# from scipy import stats
+#Execute a method that returns some important key values of Linear Regression:
+#slope, intercept, r, p, std_err = stats.linregress(x, y)
+
+# create a function that uses the slope of the line and intercept to draw a line
+
+#def myfunc(x):
+  #return slope * x + intercept
+
+#mymodel = list(map(myfunc, x))
+
+# plot the new line
+#plt.scatter(x, y)
+#plt.plot(x, mymodel)
+#plt.show()
+#what is r? can you do r2 also? - more research
+
+#print(r)
+
+## how to get r on the linear regrerssion plot as i.e. legend
+
+#Create Histogram
+#https://www.w3schools.com/python/matplotlib_histograms.asp
+# In Matplotlib, we use the hist() function to create histograms.
+# The hist() function will use an array of numbers to create a histogram,
+#  the array is sent into the function as an argument.
+#plt.hist(x)
+# plt.show() 
+
+
+plt.title("plottask-displays a plot of the functions\n f(x)=x, g(x)=x2 and h(x)=x3 in the range [0, 4]")
+plt.xlabel("X value")
+plt.ylabel("Y value")
+plt.legend()
+
+plt.show()

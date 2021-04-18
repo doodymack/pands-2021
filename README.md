@@ -50,10 +50,9 @@ Week1:
 7. Research examples of python code to analyse data (Fisher data set or similar), code repositories, python forums- 05 Apr- ongoing .  reference file created
 Week 2:
 8. Begin writing the code: -05 Apr started.
-9. Pull the data set to VSC file (text file?)
+9. Pull the data set to VSC file (text file?)-completed
 10. Write program to error check
-11. Create a simpler dacd
-ta set file to check
+11. Create a simpler data set file to check
 12. Write program to:
 13. pull the data set
 14. Write python program to define: analyse the data
