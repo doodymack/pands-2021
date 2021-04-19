@@ -83,3 +83,30 @@ measurements of:  sepal length-cm; sepal width-cm; petal length-cm; petal width-
 
 UCI Machine Learning Repository of the Fisher Dataset:  https://archive.ics.uci.edu/ml/datasets/Iris
 
+How to write an Algorithm- Useful for Project Architecture?
+
+1. Identify the Inputs
+2. Identify the Processes
+3. Identify the Outputs
+4. Develop a HIPO Chart
+
+Step 1: identify the data:
+
+- What data do I need?
+- How will I get the data?
+- In what format will the data be?
+
+STEP 2: IDENTIFY THE PROCESSES
+- How can I manipulate data to produce meaningful results?
+
+STEP 3: IDENTIFY THE OUTPUTS
+-What outputs do I need to return to the user?
+-What format should the outputs take?
+
+STEP 4: DEVELOP A HIPO CHART
+- Hierarchy of Inputs, Processes and Outputs
+- Used to develop requirements, construct the design, and support implementation
+- Break the problem into smaller more manageable parts (i.e. Divide and Conquer)
+- What inputs do the modules need?
+- What processes need to happen in the modules?
+- What outputs are produced by the modules?

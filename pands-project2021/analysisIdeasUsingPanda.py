@@ -157,10 +157,10 @@ df1.join(df2,on=col1,how='inner') # SQL-style join the columns in df1
 #plt.hist(x)
 # plt.show() 
 
+#From weekly task 'plottask1- may be of use?
+#plt.title("plottask-displays a plot of the functions\n f(x)=x, g(x)=x2 and h(x)=x3 in the range [0, 4]")
+#plt.xlabel("X value")
+#plt.ylabel("Y value")
+#plt.legend()
 
-plt.title("plottask-displays a plot of the functions\n f(x)=x, g(x)=x2 and h(x)=x3 in the range [0, 4]")
-plt.xlabel("X value")
-plt.ylabel("Y value")
-plt.legend()
-
-plt.show()
+#plt.show()
