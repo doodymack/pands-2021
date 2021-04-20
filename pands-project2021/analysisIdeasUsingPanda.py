@@ -3,6 +3,8 @@
 
 import pandas as pd 
 import numpy as np
+import matplotlib.pyplot as plt
+
 
 
 #Open a local file using Pandas, usually a CSV file,
@@ -151,10 +153,11 @@ df1.join(df2,on=col1,how='inner') # SQL-style join the columns in df1
 
 #Create Histogram
 #https://www.w3schools.com/python/matplotlib_histograms.asp
+#https://github.com/matplotlib/matplotlib
 # In Matplotlib, we use the hist() function to create histograms.
 # The hist() function will use an array of numbers to create a histogram,
-#  the array is sent into the function as an argument.
-#plt.hist(x)
+# the array is sent into the function as an argument.
+# plt.hist(x)
 # plt.show() 
 
 #From weekly task 'plottask1- may be of use?

@@ -3,6 +3,7 @@
 
 import pandas as pd 
 import numpy as np
+import matplotlib.pyplot as plt
 
 #https://towardsdatascience.com/a-quick-introduction-to-the-pandas-python-library-f1b678f34673
 # When you want to use Pandas for data analysis, you’ll usually use it in one of three different ways:
