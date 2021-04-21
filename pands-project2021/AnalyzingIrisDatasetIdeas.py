@@ -1,10 +1,15 @@
-# analysisworkings.py
+# AnalysingIrisDatasetIdeas.py
 # Author: paul mcgrath
 # workings using analysing irisdataset.csv
 # pandas, numpy and matplotlib
+#below doesn't work so will use downloaded csv instead
 
+#from sklearn.datasets import load_iris
+#data = load_iris()
+
+#https://www.geeksforgeeks.org/python-basics-of-pandas-using-iris-dataset/
 #https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.hist.html
-
+ 
 # Pandas is an open source Python package that is most widely used for 
 # data science/data analysis and machine learning tasks.
 #  It is built on top of another package named Numpy,
@@ -31,7 +36,7 @@ data = pd.read_csv("iris.csv")
 #print the 1st 5 rows (if () is empty, or x rows if (x)
 #print (data.head(6))
 # returns a stats summary table
-#print (data.describe())
+print (data.describe())
 # returns a summary of the dataframe
 #can see how many non Nulls there are
 #print (data.info())
@@ -94,7 +99,7 @@ print ("Statistics for SepalLengthCm :")
 print("\nSum:",sumSepalLength, "\nMean:",meanSepalLength , "\nMedian:",
 medianSepalLength,"\nMin:",minSepalLength,"\nMax:",maxSepalLength)
 
-# find out  whats happening here   https://www.geeksforgeeks.org/python-basics-of-pandas-using-iris-dataset/
+#
 
 data.isnull()
 print (data.isnull)
@@ -105,8 +110,14 @@ print (data.isnull)
 '''
 #Create a Histogram for Sepal Length
 #https://realpython.com/courses/python-histograms/
-
-
+'''
+data.hist()
+plt.show()
+'''
+# summary scatter plot matrix
+scatter_matrix(data)
+plt.show()
+'''
 pd.plt.figure(figsize = (10, 7))
 x = np.data["SepalLengthCm"]
 plt.pyplot.hist()
@@ -114,4 +125,4 @@ plt.hist(x, bins = 20, color = "blue")
 plt.title ("Sepal Length in cm")
 plt.xlabel("Sepal Length in cm")
 plt.ylabel ("Count")
-plt.show()
+plt.show()'''

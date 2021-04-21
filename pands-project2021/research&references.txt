@@ -1,6 +1,6 @@
 # research&references.txt
 # Author:PaulMcGrath
-# summary of articles and data from resaerching wayas to analyse Fisher Iris data set
+# summary of articles and data from researching ways to analyse Fisher Iris data set
 
 1. https://medium.com/@avulurivenkatasaireddy/exploratory-data-analysis-of-iris-data-set-using-python-823e54110d2d
 Summary abstract: 
@@ -21,3 +21,26 @@ LDA:  Linear discriminant analysis (LDA) is a generalization of Fisher's linear 
 a method used in statistics and other fields, to find a linear combination of features that
  characterizes or separates two or more classes of objects or events.
  Also known as 'normal discriminant analysis' (NDA), or 'discriminant function analysis'
+
+
+Pandas:
+#https://towardsdatascience.com/a-quick-introduction-to-the-pandas-python-library-f1b678f34673
+https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.hist.html
+
+Matplotlib:
+
+#https://github.com/matplotlib/matplotlib
+
+ 
+ scatter
+ https://www.w3schools.com/python/matplotlib_scatter.asp
+
+ histograms
+ #https://realpython.com/courses/python-histograms/
+ #https://www.w3schools.com/python/matplotlib_histograms.asp
+
+
+Python & Iris Dataset:
+https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-using-python-2995618a6342
+https://www.geeksforgeeks.org/box-plot-and-histogram-exploration-on-iris-data/?ref=lbp
+https://www.geeksforgeeks.org/python-basics-of-pandas-using-iris-dataset/

@@ -1,4 +1,4 @@
-# analysis.py
+# AnalysingDataUsingPandas.py
 # Author: paul mcgrath
 
 import pandas as pd 
