@@ -35,6 +35,7 @@ Matplotlib:
 
  correlations:
  https://datatofish.com/correlation-matrix-pandas/
+ https://jakevdp.github.io/PythonDataScienceHandbook/04.02-simple-scatter-plots.html
 
  histograms
  #https://realpython.com/courses/python-histograms/

@@ -8,7 +8,34 @@ import matplotlib.pyplot as plt
 
 data=pd.read_csv("iris.csv" ,header=0)
 
+#below plots a scaller plot of the compelete attributes
+#further explore ways to have two species attributes on one scatter as per link below
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.scatter(x = data['SepalLengthCm'], y = data['SepalWidthCm'])
 
+#ax[0].scatter(x = data['SepalLengthCm'], y = data['SepalWidthCm'])
+#ax[0].set_xlabel('SepalLengthCm')
+#ax[0].set_ylabel('SepalWidthCm')
+#ax[1].scatter(x = data["PetalLengthCm"], y = data["PetalWidthCm"])
+#ax[1].set_xlabel("PetalLengthCm")
+#ax[1].set_ylabel("PetalWidthCm")
+
+
+plt.xlabel("SepalLengthCm")
+plt.ylabel("SepalWidthCm")
+
+plt.show()
+
+#https://jakevdp.github.io/PythonDataScienceHandbook/04.02-simple-scatter-plots.html
+#https://stackoverflow.com/questions/43159754/datasets-load-iris-in-python
+#from sklearn.datasets import load_iris
+#iris = load_iris()
+#features = iris.data.T
+#plt.scatter(features[0], features[1], alpha=0.2,
+            #s=100*features[3], c=iris.target, cmap='viridis')
+#plt.xlabel(iris.feature_names[0])
+#plt.ylabel(iris.feature_names[1]);
+'''
 species_list = list(data["Species"].unique())
 print("\nTypes of species: \n{}\n". format(species_list))
 print("Dataset length: \t{}\n" . format (len(data)))
@@ -37,9 +64,12 @@ print("Correlation Matrix:\n --------------------")
 corrMatrix = data.corr()
 print (corrMatrix)
 
-# have a look at this to get visual correlations
+
+plt.scatter(x, y, marker='o');
+
+# have a look at this to get visual correlations- uses seaborn.  Try to use use matplotlib/pandas first
 #https://datatofish.com/correlation-matrix-pandas/
-'''
+
 print("Data describe\n---")
 #print(data[data.columns[2:]].describe())
 
