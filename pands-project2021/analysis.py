@@ -4,38 +4,22 @@
 import pandas as pd 
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 
+import warnings
+warnings.filterwarnings("ignore")
 
 data=pd.read_csv("iris.csv" ,header=0)
 
-#below plots a scaller plot of the compelete attributes
-#further explore ways to have two species attributes on one scatter as per link below
-fig, ax = plt.subplots(figsize=(10, 6))
-ax.scatter(x = data['SepalLengthCm'], y = data['SepalWidthCm'])
-
-#ax[0].scatter(x = data['SepalLengthCm'], y = data['SepalWidthCm'])
-#ax[0].set_xlabel('SepalLengthCm')
-#ax[0].set_ylabel('SepalWidthCm')
-#ax[1].scatter(x = data["PetalLengthCm"], y = data["PetalWidthCm"])
-#ax[1].set_xlabel("PetalLengthCm")
-#ax[1].set_ylabel("PetalWidthCm")
 
 
-plt.xlabel("SepalLengthCm")
-plt.ylabel("SepalWidthCm")
 
-plt.show()
 
-#https://jakevdp.github.io/PythonDataScienceHandbook/04.02-simple-scatter-plots.html
-#https://stackoverflow.com/questions/43159754/datasets-load-iris-in-python
-#from sklearn.datasets import load_iris
-#iris = load_iris()
-#features = iris.data.T
-#plt.scatter(features[0], features[1], alpha=0.2,
-            #s=100*features[3], c=iris.target, cmap='viridis')
-#plt.xlabel(iris.feature_names[0])
-#plt.ylabel(iris.feature_names[1]);
 '''
+
+
+###
+### Number 1:  a summary of each variable outputted to a single text file (append)
 species_list = list(data["Species"].unique())
 print("\nTypes of species: \n{}\n". format(species_list))
 print("Dataset length: \t{}\n" . format (len(data)))
@@ -60,12 +44,7 @@ print("Sepal width StDev: \t {:0.3f}" .format  (np.std(data["SepalWidthCm"])))
 print("Petal length StDev:\t {:0.3f}" .format  (np.std(data["PetalLengthCm"])))
 print("Petal width StDev: \t {:0.3f}\n" . format (np.std(data["PetalWidthCm"])))
 
-print("Correlation Matrix:\n --------------------")
-corrMatrix = data.corr()
-print (corrMatrix)
 
-
-plt.scatter(x, y, marker='o');
 
 # have a look at this to get visual correlations- uses seaborn.  Try to use use matplotlib/pandas first
 #https://datatofish.com/correlation-matrix-pandas/
@@ -104,8 +83,6 @@ iris_versicolor=df.loc[df["Species"]=="Iris-versicolor"]
 #sns.FacetGrid(df,hue="type",size=3).map(sns.distplot,"sepal_length").add_legend()
 #sns.FacetGrid(df,hue="type",size=3).map(sns.distplot,"sepal_width").add_legend()
 #plt.show()
-
-
 
 
 #You would give the path, filename etc inside the parenthesis
@@ -154,16 +131,6 @@ DataIVI = (data.loc[data["Species"]=="Iris-virginica"])
 np.min(DataIS['SepalLengthCm'])
 
 
-
-
-plt.hist(DataIS['SepalLengthCm'])
-plt.show()
-
-#could this be done with a for loop i.e. for x = {}  with dict item being the column headings
-#plt.hist(DataIS[" ", str x)  plt.hist(DataIS[" ".format x)
-#but how to label axes too?
-#further investigate- look at earlier lessons
-
 #print(DataIS.head(5))
 #print(DataIVE.head(5))
 #print(DataIVI.head(5))
@@ -200,11 +167,23 @@ print(DataIVI_SW.head(15))
 print(DataIVI_PL.head(15))
 print(DataIVI_PW.head(15))
 
-plt.hist(DataIS_SW)
-plt.title ("Iris-Setosa SepalWidthCm")
-plt.xlabel("Sepal Width in cm")
-plt.ylabel ("Count")
 
+
+
+###
+#### Number 2: a histogram of each variable saved to png files
+
+# need to create histograms of each variable-  x 4 for each species x 3 =12 histograms
+
+#plt.hist(DataIS['SepalLengthCm'])
+# plt.show()
+
+#could this be done with a for loop i.e. for x = {}  with dict item being the column headings
+#plt.hist(DataIS[" ", str x)  plt.hist(DataIS[" ".format x)
+#but how to label axes too?
+#further investigate- look at earlier lessons
+
+# to save histograms as png:
 #if you want to save plot as standard i.e. "png" then leave file ending blank which defaults to ".png"
 # if you want to sane plot as pdf save as .pdf  or .svg
 # plt.savefig('xxxxxx.png', dpi=300)  dpi of 300 increases resolution, add Transparent=True to make plot trsansparent (not recommended)
@@ -212,5 +191,98 @@ plt.ylabel ("Count")
 #The export as vector-based SVG or PDF files is generally preferred over bitmap-based PNG or JPG files
 # as they are richer formats, usually providing higher quality plots along with smaller file sizes
 plt.savefig("Iris_Setosa_SepalWidth")
-plt.show()'''
+plt.show()
+
+# first attempt to create histograms of split data- may not be required as
+# plt.hist(DataIS['SepalLengthCm']) seens to work.
+
+plt.hist(DataIS_SW)
+plt.title ("Iris-Setosa SepalWidthCm")
+plt.xlabel("Sepal Width in cm")
+plt.ylabel ("Count")
+
+
+
+###
+### Number 3:  Create correlation Visualizations
+
+#1:
+sns.FacetGrid(data, hue="Species", palette="hls", size=5) \
+   .map(plt.scatter, "SepalLengthCm", "SepalWidthCm") \
+   .add_legend()
+#2:
+sns.FacetGrid(data, hue="Species", palette="hls", size=5) \
+   .map(plt.scatter, "SepalLengthCm", "PetalLengthCm") \
+   .add_legend()
+#3:
+sns.FacetGrid(data, hue="Species", palette="hls", size=5) \
+   .map(plt.scatter, "SepalLengthCm", "PetalWidthCm") \
+   .add_legend()
+#4:
+sns.FacetGrid(data, hue="Species", palette="hls", size=5) \
+   .map(plt.scatter, "SepalWidthCm", "PetalLengthCm") \
+   .add_legend()
+ #5:
+sns.FacetGrid(data, hue="Species", palette="hls", size=5) \
+   .map(plt.scatter, "SepalWidthCm", "PetalWidthCm") \
+   .add_legend()
+#6:
+sns.FacetGrid(data, hue="Species", palette="hls", size=5) \
+   .map(plt.scatter, "PetalLengthCm", "PetalWidthCm") \
+   .add_legend()
+
+
+#data.plot(kind="scatter", x="SepalLengthCm", y="SepalWidthCm")
+
+## https://www.kaggle.com/zachgold/python-iris-data-visualizations
+#  One piece of information missing in the plots above is what species each plant is
+# We'll use seaborn's FacetGrid to color the scatterplot by species. That's what 
+# hue="Species" is for in the 1st line below!
+# I've also added a parameter to the FacetGrid function for color palette. Here it's 
+# set to husl.
+
+
+
+
+#below plots a scatter plot of the compelete attributes
+#further explore ways to have two species attributes on one scatter as per link below
+
+#fig, ax = plt.subplots(figsize=(10, 6))
+#ax.scatter(x = data['SepalLengthCm'], y = data['SepalWidthCm'])
+#ax[1].scatter(x = data["PetalLengthCm"], y = data["PetalWidthCm"])
+
+#ax[0].scatter(x = data['SepalLengthCm'], y = data['SepalWidthCm'])
+#ax[0].set_xlabel('SepalLengthCm')
+#ax[0].set_ylabel('SepalWidthCm')
+#ax[1].scatter(x = data["PetalLengthCm"], y = data["PetalWidthCm"])
+#ax[1].set_xlabel("PetalLengthCm")
+#ax[1].set_ylabel("PetalWidthCm")
+
+# print("Correlation Matrix:\n --------------------")
+# corrMatrix = data.corr()
+# print (corrMatrix)
+
+
+# plt.scatter(x, y, marker='o');
+
+#plt.xlabel("SepalLengthCm")
+#plt.ylabel("SepalWidthCm")
+
+plt.show()
+
+
+# https://jakevdp.github.io/PythonDataScienceHandbook/04.02-simple-scatter-plots.html
+#https://stackoverflow.com/questions/43159754/datasets-load-iris-in-python
+
+# this didnt work- may be worth looking further if have time to see if anything uesful
+
+#from sklearn.datasets import load_iris
+#iris = load_iris()
+#features = iris.data.T
+#plt.scatter(features[0], features[1], alpha=0.2,
+            #s=100*features[3], c=iris.target, cmap='viridis')
+#plt.xlabel(iris.feature_names[0])
+#plt.ylabel(iris.feature_names[1]);
+
+'''
 print ("Hello")

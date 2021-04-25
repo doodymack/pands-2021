@@ -44,9 +44,9 @@ Week1:
 1. Reseaarch Iris Dataset- complete
 2. Get Iris DataSet (download to readme) -complete
 3. Research PANDAS- do the week 11. Research external sources-complete
-4. Create a test file similar to fisdher data set and start tp 'play' with it- record learnings for readme -ongoing
-5. Research websites/forums on ways to analyze the dataset- ongoing
-6. Decision on final plan: MyAnalysis Plan- what attributes will be analysed/ how it will be presented/what histograms/ what are x & y for scattterplots (loook for correlations)
+4. Create a test file similar to fisdher data set and start to 'play' with it- record learnings for readme -ongoing
+5. Research websites/forums on ways to analyze the dataset- complete
+6. Decision on final plan: MyAnalysis Plan- what attributes will be analysed/ how it will be presented/what histograms/ what are x & y for scattterplots (loook for correlations)- complete
 7. Research examples of python code to analyse data (Fisher data set or similar), code repositories, python forums- 05 Apr- ongoing .  reference file created
 Week 2:
 8. Begin writing the code: -05 Apr started.
@@ -54,19 +54,19 @@ Week 2:
 10. Write program to error check
 11. Create a simpler data set file to check
 12. Write program to:
-13. pull the data set
+13. pull the data set-complete
 14. Write python program to define: analyse the data
 Week 3:
-15. Write python program to create histograms
-16. Write python program to create scatter=plots
-17. Run program
+15. Write python program to create histograms- ongoing
+16. Write python program to create scatter=plots-ongoing
+17. Run program-ongoing
 18. Degbug
 Week 4: 
 19. Look for ways to make code more elegant
 20. Create screenshots of histograms/scatterplots
 21. Paste screenshots to repository 
 22. Update ReadMe file
-Week 5: comntingency
+Week 5: contingency
 
 
 What is the Fisher Dataset (Wikipedia): 
@@ -91,7 +91,9 @@ There are various versions of the data such as:
 
 UCI Machine Learning Repository of the Fisher Dataset:  https://archive.ics.uci.edu/ml/datasets/Iris
 
-How to write an Algorithm- Useful for Project Architecture?
+Project Plan:
+
+adapted from 'How to write an Algorithm'
 
 1. Identify the Inputs
 2. Identify the Processes
@@ -99,17 +101,41 @@ How to write an Algorithm- Useful for Project Architecture?
 4. Develop a HIPO Chart
 
 Step 1: identify the data:
-
+  Project goal: Write s program to analyse the Fisher (Anerson) Dataset 
 - What data do I need?
+    Fisher dataset
 - How will I get the data?
+  search online has multiple versions.  Best found was the csv file: iris.csv
 - In what format will the data be?
-
+    csv file
 STEP 2: IDENTIFY THE PROCESSES
 - How can I manipulate data to produce meaningful results?
+  The dataset is a csv file.  The task is to execute correltion analysis using python.
+  Firstly the data required to be in a format that Python code could be used to analyse i.e. a Dataframe. 
+  The initial obvious application was Pandas to convert the csv to a dataframe
+  Once a datframe created research ways to execute the following:
+    1. Generate a statistical summary data- all
+    2. Split the data by flower species
+    3. Generate statistical summary data tables per species
+    4. Generate histograms of each attribute per species
+      - iris-setosa: SL,SW,PL,PW
+      - iris-versicolor: SL,SW,PL,PW
+      -iris-virginica: SL,SW,PL,PW
+    5. Generate visual correlations of attributes (use Seaborn FacetGrid tp plot three species on each plot)
+      - sepal length vs sepal width
+      - sepal length vs petal length
+      - sepal length vs petal width
+      - sepal width vs petal length
+      - sepal width vs petal width
+      - petal length vs petal width
 
 STEP 3: IDENTIFY THE OUTPUTS
 -What outputs do I need to return to the user?
+  -see above: 1, summary stats tables 2, histograms ,3 correlations (visual)
 -What format should the outputs take?
+  - a summary of each variable outputted to a single text file (append)
+  - a histogram of each variable saved to png files
+  - a scatter plot of each pair of variables (as FacetGrid)
 
 STEP 4: DEVELOP A HIPO CHART
 - Hierarchy of Inputs, Processes and Outputs
