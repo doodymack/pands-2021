@@ -1,6 +1,7 @@
 # analysis.py
 # Author: paul mcgrath
 
+
 import pandas as pd 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -11,17 +12,41 @@ warnings.filterwarnings("ignore")
 
 data=pd.read_csv("iris.csv" ,header=0)
 
+#print("Hello stackoverflow!", file=open("test2.txt", "a"))
+#print("I have a question.", file=open("test2.txt", "a"))
+
+#with open("test.txt", "a") as f:
+    #print("Hello stackoverflow!", file=f)
+
+#import sys
+#sys.stdout = open('test.txt','wt')
+#print ("Hello stackoverflow!")
+#print ("I have a question.")
+
+#def append():
+    #text_file = open("Test2.txt", "a")
+    #text_file.write("\n",f)
 
 
 
+file = open("Test2.txt" ,"a")
 
-'''
+species_list = list(data["Species"].unique())
+
+file.write("\nTypes of species: \n{}\n". format(species_list))
+file.write("Dataset length: \t{}\n" . format (len(data)))
+file.close()
 
 
 ###
 ### Number 1:  a summary of each variable outputted to a single text file (append)
+
+
+'''
 species_list = list(data["Species"].unique())
+
 print("\nTypes of species: \n{}\n". format(species_list))
+
 print("Dataset length: \t{}\n" . format (len(data)))
 
 print("Sepal length range: \t[{}, {}]" .format (min(data["SepalLengthCm"]) , max(data["SepalLengthCm"])))
@@ -43,7 +68,6 @@ print("Sepal length StDev:\t {:0.3f}" .format (np.std(data["SepalLengthCm"])))
 print("Sepal width StDev: \t {:0.3f}" .format  (np.std(data["SepalWidthCm"])))
 print("Petal length StDev:\t {:0.3f}" .format  (np.std(data["PetalLengthCm"])))
 print("Petal width StDev: \t {:0.3f}\n" . format (np.std(data["PetalWidthCm"])))
-
 
 
 # have a look at this to get visual correlations- uses seaborn.  Try to use use matplotlib/pandas first

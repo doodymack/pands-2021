@@ -1,0 +1,8 @@
+
+Types of species: 
+['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']
+Dataset length: 	150
+
+Types of species: 
+['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']
+Dataset length: 	150

@@ -1,0 +1,4 @@
+# SummaryOfEachVariable.txt
+#Author: PaulMc Grath
+#
+
