@@ -3,6 +3,98 @@ Types of species:
 ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']
 Dataset length: 	150
 
-Types of species: 
-['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']
-Dataset length: 	150
+Sepal length range: 	[4.3, 7.9]
+Sepal width range:  	[2.0, 4.4]
+Petal length range: 	[1.0, 6.9]
+Petal width range:  	[0.1, 2.5]
+Sepal length mean:	 5.843
+Sepal width mean: 	 3.054
+Petal length mean:	 3.759
+Petal width mean: 	 1.199
+Sepal length variance:	 0.681
+Sepal width variance: 	 0.187
+Petal length variance:	 3.092
+Petal width variance: 	 0.579
+Sepal length StDev:	 0.825
+Sepal width StDev: 	 0.432
+Petal length StDev:	 1.759
+Petal width StDev: 	 0.761
+
+Iris Setosa Attributes:
+
+Iris Setosa Sepal Length min:	4.300
+Iris Setosa Sepal Length max:	5.800
+Iris Setosa Sepal length mean:	 5.006
+Iris Setosa Sepal Length var:	0.122
+Iris Setosa Sepal Length StDev:	0.349
+
+Iris Setosa Sepal Width min:	2.300
+Iris Setosa Sepal Width max:	4.400
+Iris Setosa Sepal Width mean:	 3.418
+Iris Setosa Sepal Width var:	0.142
+Iris Setosa Sepal Width StDev:	0.377
+
+Iris Setosa PetalLengthCm min:	1.000
+Iris Setosa PetalLengthCm max:	1.900
+Iris Setosa PetalLengthCm mean:	 1.464
+Iris Setosa PetalLengthCm var:	0.030
+Iris Setosa PetalLengthCm StDev:	0.172
+
+Iris Setosa PetalWidthCm min:	0.100
+Iris Setosa PetalWidthCm max:	0.600
+Iris Setosa PetalWidthCm mean:	 0.244
+Iris Setosa PetalWidthCm var:	0.011
+Iris Setosa PetalWidthCm StDev:	0.106
+
+Iris Versicolor Attributes:
+
+Iris Versicolor Sepal Length min:	4.900
+Iris Versicolor Sepal Length max:	7.000
+Iris Versicolor Sepal length mean:	 5.936
+Iris Versicolor Sepal Length var:	0.261
+Iris Versicolor Sepal Length StDev:	0.511
+
+Iris Versicolor Sepal Width min:	2.000
+Iris Versicolor Sepal Width max:	3.400
+Iris Versicolor Sepal Width mean:	 2.770
+Iris Versicolor Sepal Width var:	0.097
+Iris Versicolor Sepal Width StDev:	0.311
+
+Iris Versicolor PetalLengthCm min:	3.000
+Iris Versicolor PetalLengthCm max:	5.100
+Iris Versicolor PetalLengthCm mean:	 4.260
+Iris Versicolor PetalLengthCm var:	0.216
+Iris Versicolor PetalLengthCm StDev:	0.465
+
+Iris Versicolor PetalWidthCm min:	1.000
+Iris Versicolor PetalWidthCm max:	1.800
+Iris Versicolor PetalWidthCm mean:	 1.326
+Iris Versicolor PetalWidthCm var:	0.038
+Iris Versicolor PetalWidthCm StDev:	0.196
+
+Iris Virginica Attributes:
+
+Iris Virginica Sepal Length min:	4.900
+Iris Virginica Sepal Length max:	7.900
+Iris Virginica Sepal length mean:	 6.588
+Iris Virginica Sepal Length var:	0.396
+Iris Virginica Sepal Length StDev:	0.629
+
+Iris Virginica Sepal Width min:	2.200
+Iris Virginica Sepal Width max:	3.800
+Iris Virginica Sepal Width mean:	 2.974
+Iris Virginica Sepal Width var:	0.102
+Iris Virginica Sepal Width StDev:	0.319
+
+Iris Virginica PetalLengthCm min:	3.000
+Iris Virginica PetalLengthCm max:	5.100
+Iris Virginica PetalLengthCm mean:	 4.260
+Iris Virginica PetalLengthCm var:	0.216
+Iris Virginica PetalLengthCm StDev:	0.465
+
+Iris Versicolor PetalWidthCm min:	1.000
+Iris Versicolor PetalWidthCm max:	1.800
+Iris Versicolor PetalWidthCm mean:	 1.326
+Iris Versicolor PetalWidthCm var:	0.038
+Iris Versicolor PetalWidthCm StDev:	0.196
+
