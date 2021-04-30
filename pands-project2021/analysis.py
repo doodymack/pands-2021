@@ -12,36 +12,10 @@ warnings.filterwarnings("ignore")
 
 data=pd.read_csv("iris.csv" ,header=0)
 
-#print("Hello stackoverflow!", file=open("test2.txt", "a"))
-#print("I have a question.", file=open("test2.txt", "a"))
 
-#with open("test.txt", "a") as f:
-    #print("Hello stackoverflow!", file=f)
+file = open("SummaryOfEachVariable.txt" ,"w")
 
-#import sys
-#sys.stdout = open('test.txt','wt')
-#print ("Hello stackoverflow!")
-#print ("I have a question.")
-
-#def append():
-    #text_file = open("Test2.txt", "a")
-    #text_file.write("\n",f)
-
-
-
-file = open("Test2.txt" ,"w")
-
-#species_list = list(data["Species"].unique())
-
-#file.write("\nTypes of species: \n{}\n". format(species_list))
-#file.write("Dataset length: \t{}\n" . format (len(data)))
-#file.close()
-
-
-###
 ### Number 1:  a summary of each variable outputted to a single text file (append)
-
-
 
 species_list = list(data["Species"].unique())
 
@@ -49,34 +23,40 @@ file.write("\nTypes of species: \n{}\n". format(species_list))
 
 file.write("Dataset length: \t{}\n\n" . format (len(data)))
 
-file.write("Sepal length range: \t[{}, {}]\n" .format (min(data["SepalLengthCm"]) , max(data["SepalLengthCm"])))
-file.write("Sepal width range:  \t[{}, {}]\n" .format (min(data["SepalWidthCm"]), max(data["SepalWidthCm"])))
-file.write("Petal length range: \t[{}, {}]\n" .format (min(data["PetalLengthCm"]), max(data["PetalLengthCm"])))
-file.write("Petal width range:  \t[{}, {}]\n" .format (min(data["PetalWidthCm"]), max(data["PetalWidthCm"])))
 
-file.write("Sepal length mean:\t {:0.3f}\n" .format ( np.mean(data["SepalLengthCm"])))
-file.write("Sepal width mean: \t {:0.3f}\n"  .format( np.mean(data["SepalWidthCm"])))
-file.write("Petal length mean:\t {:0.3f}\n"  .format ( np.mean(data["PetalLengthCm"])))
-file.write("Petal width mean: \t {:0.3f}\n" .format ( np.mean(data["PetalWidthCm"])))
+SL= "SepalLengthCm"
+SW ="SepalWidthCm"
+PL= "PetalLengthCm"
+PW= "PetalWidthCm"
 
-file.write("Sepal length variance:\t {:0.3f}\n" .format ( np.var(data["SepalLengthCm"])))
-file.write("Sepal width variance: \t {:0.3f}\n"  .format( np.var(data["SepalWidthCm"])))
-file.write("Petal length variance:\t {:0.3f}\n"  .format ( np.var(data["PetalLengthCm"])))
-file.write("Petal width variance: \t {:0.3f}\n"  . format ( np.var(data["PetalWidthCm"])))
+file.write("Sepal length range: \t[{}, {}]\n" .format (min(data[SL]) , max(data[SL])))
+file.write("Sepal width range:  \t[{}, {}]\n" .format (min(data[SW]), max(data[SW])))
+file.write("Petal length range: \t[{}, {}]\n" .format (min(data[PL]), max(data[PL])))
+file.write("Petal width range:  \t[{}, {}]\n" .format (min(data[PW]), max(data[PW])))
 
-file.write("Sepal length StDev:\t {:0.3f}\n" .format (np.std(data["SepalLengthCm"])))
-file.write("Sepal width StDev: \t {:0.3f}\n" .format  (np.std(data["SepalWidthCm"])))
-file.write("Petal length StDev:\t {:0.3f}\n" .format  (np.std(data["PetalLengthCm"])))
-file.write("Petal width StDev: \t {:0.3f}\n\n" . format (np.std(data["PetalWidthCm"])))
+file.write("Sepal length mean:\t {:0.3f}\n" .format ( np.mean(data[SL])))
+file.write("Sepal width mean: \t {:0.3f}\n"  .format( np.mean(data[SW])))
+file.write("Petal length mean:\t {:0.3f}\n"  .format ( np.mean(data[PL])))
+file.write("Petal width mean: \t {:0.3f}\n" .format ( np.mean(data[PW])))
 
+file.write("Sepal length variance:\t {:0.3f}\n" .format ( np.var(data[SL])))
+file.write("Sepal width variance: \t {:0.3f}\n"  .format( np.var(data[SW])))
+file.write("Petal length variance:\t {:0.3f}\n"  .format ( np.var(data[PL])))
+file.write("Petal width variance: \t {:0.3f}\n"  . format ( np.var(data[PW])))
 
+file.write("Sepal length StDev:\t {:0.3f}\n" .format (np.std(data[SL])))
+file.write("Sepal width StDev: \t {:0.3f}\n" .format  (np.std(data[SW])))
+file.write("Petal length StDev:\t {:0.3f}\n" .format  (np.std(data[PL])))
+file.write("Petal width StDev: \t {:0.3f}\n\n" . format (np.std(data[PW])))
+
+# Dataframe sliced per species
 DataIS = (data.loc[data["Species"]=="Iris-setosa"])
 DataIVE = (data.loc[data["Species"]=="Iris-versicolor"])
 DataIVI = (data.loc[data["Species"]=="Iris-virginica"])
 
-# Dataframe sliced per species
 
-file.write("Iris Setosa Attributes:\n\n")
+file.write("Iris Setosa Attributes:\n")
+file.write("************************\n")
 
 DataIS_SL= DataIS["SepalLengthCm"]
 DataIS_SW= DataIS["SepalWidthCm"]
@@ -109,7 +89,7 @@ file.write("Iris Setosa PetalWidthCm mean:\t {:0.3f}\n" .format (np.mean([DataIS
 file.write("Iris Setosa PetalWidthCm var:\t{:0.3f}\n" .format (np.var([DataIS_PW])))
 file.write("Iris Setosa PetalWidthCm StDev:\t{:0.3f}\n\n" .format (np.std([DataIS_PW])))
 
-# Dataframe sliced per species
+
 DataIVE_SL= DataIVE["SepalLengthCm"]
 DataIVE_SW= DataIVE["SepalWidthCm"]
 DataIVE_PL= DataIVE["PetalLengthCm"]
@@ -117,7 +97,8 @@ DataIVE_PW= DataIVE["PetalWidthCm"]
 
 
 # Export summary of variables of Iris Versicolor (Data split)
-file.write("Iris Versicolor Attributes:\n\n")
+file.write("Iris Versicolor Attributes:\n")
+file.write("***************************\n")
 
 file.write("Iris Versicolor Sepal Length min:\t{:0.3f}\n" .format (np.min([DataIVE_SL])))
 file.write("Iris Versicolor Sepal Length max:\t{:0.3f}\n" .format (np.max([DataIVE_SL])))
@@ -143,14 +124,15 @@ file.write("Iris Versicolor PetalWidthCm mean:\t {:0.3f}\n" .format (np.mean([Da
 file.write("Iris Versicolor PetalWidthCm var:\t{:0.3f}\n" .format (np.var([DataIVE_PW])))
 file.write("Iris Versicolor PetalWidthCm StDev:\t{:0.3f}\n\n" .format (np.std([DataIVE_PW])))
 
-# Dataframe sliced per species
+
 DataIVI_SL= DataIVI["SepalLengthCm"]
 DataIVI_SW= DataIVI["SepalWidthCm"]
 DataIVI_PL= DataIVI["PetalLengthCm"]
 DataIVI_PW= DataIVI["PetalWidthCm"]
 
 # Export summary of variables of Iris Virginica (Data split)
-file.write("Iris Virginica Attributes:\n\n")
+file.write("Iris Virginica Attributes:\n")
+file.write("**************************\n")
 
 file.write("Iris Virginica Sepal Length min:\t{:0.3f}\n" .format (np.min([DataIVI_SL])))
 file.write("Iris Virginica Sepal Length max:\t{:0.3f}\n" .format (np.max([DataIVI_SL])))
@@ -170,67 +152,48 @@ file.write("Iris Virginica PetalLengthCm mean:\t {:0.3f}\n" .format (np.mean([Da
 file.write("Iris Virginica PetalLengthCm var:\t{:0.3f}\n" .format (np.var([DataIVE_PL])))
 file.write("Iris Virginica PetalLengthCm StDev:\t{:0.3f}\n\n" .format (np.std([DataIVE_PL])))
 
-file.write("Iris Versicolor PetalWidthCm min:\t{:0.3f}\n" .format (np.min([DataIVE_PW])))
-file.write("Iris Versicolor PetalWidthCm max:\t{:0.3f}\n" .format (np.max([DataIVE_PW])))
-file.write("Iris Versicolor PetalWidthCm mean:\t {:0.3f}\n" .format (np.mean([DataIVE_PW])))
-file.write("Iris Versicolor PetalWidthCm var:\t{:0.3f}\n" .format (np.var([DataIVE_PW])))
-file.write("Iris Versicolor PetalWidthCm StDev:\t{:0.3f}\n\n" .format (np.std([DataIVE_PW])))
+file.write("Iris Virginica PetalWidthCm min:\t{:0.3f}\n" .format (np.min([DataIVE_PW])))
+file.write("Iris Virginica PetalWidthCm max:\t{:0.3f}\n" .format (np.max([DataIVE_PW])))
+file.write("Iris Virginica PetalWidthCm mean:\t {:0.3f}\n" .format (np.mean([DataIVE_PW])))
+file.write("Iris Virginica PetalWidthCm var:\t{:0.3f}\n" .format (np.var([DataIVE_PW])))
+file.write("Iris Virginica PetalWidthCm StDev:\t{:0.3f}\n\n" .format (np.std([DataIVE_PW])))
 
-'''
-###
-#### Number 2: a histogram of each variable saved to png files
 
-# need to create histograms of each variable-  x 4 for each species x 3 =12 histograms
-
-#plt.hist(DataIS['SepalLengthCm'])
-#plt.legend(['Red'])
-#plt.show()
-
-#could this be done with a for loop i.e. for x = {}  with dict item being the column headings
-#plt.hist(DataIS[" ", str x)  plt.hist(DataIS[" ".format x)
-#but how to label axes too?
-#further investigate- look at earlier lessons
-
-# to save histograms as png:
-#if you want to save plot as standard i.e. "png" then leave file ending blank which defaults to ".png"
-# if you want to sane plot as pdf save as .pdf  or .svg
-# plt.savefig('xxxxxx.png', dpi=300)  dpi of 300 increases resolution, add Transparent=True to make plot trsansparent (not recommended)
-# facecolor= "blue" gives a blue margin
-#The export as vector-based SVG or PDF files is generally preferred over bitmap-based PNG or JPG files
-# as they are richer formats, usually providing higher quality plots along with smaller file sizes
-plt.savefig("Iris_Setosa_SepalWidth")
-plt.show()
-'''
-# first attempt to create histograms of split data- may not be required as
-
-#this works but look for usign a global variable for "Iris-Setosa", "Iris Virginica", "Iris Versicolor", "SepalLengthCm", 'SepalWidthCm',"PetalLengthCm","PetalWidthCm"
-SL= 'SepalLengthCm'
+# a histogram of each variable saved to png files
 
 plt.hist(DataIS[SL]) 
 plt.title ("Iris-Setosa SepalLengthCm")
 plt.xlabel("Sepal Length in cm")
 plt.ylabel ("Count")
+plt.axvline(DataIS[SL].mean(), color='r', linestyle='dashed', linewidth=1)
+plt.legend("M")
 plt.savefig("Iris_Setosa_SepalLength")
 plt.show()
 
-plt.hist(DataIS['SepalWidthCm']) 
+plt.hist(DataIS[SW]) 
 plt.title ("Iris-Setosa SepalWidthCm")
 plt.xlabel("Sepal Length in cm")
 plt.ylabel ("Count")
+plt.axvline(DataIS[SW].mean(), color='r', linestyle='dashed', linewidth=1)
+plt.legend("M")
 plt.savefig("Iris_Setosa_SepalWidth")
 plt.show()
 
-plt.hist(DataIS['PetalLengthCm']) 
+plt.hist(DataIS[PL]) 
 plt.title ("Iris-Setosa PetalLengthCm")
 plt.xlabel("Petal Length in cm")
 plt.ylabel ("Count")
+plt.axvline(DataIS[PL].mean(), color='r', linestyle='dashed', linewidth=1)
+plt.legend("M")
 plt.savefig("Iris_Setosa_PetalLength")
 plt.show()
 
-plt.hist(DataIS['PetalWidthCm']) 
+plt.hist(DataIS[PW])
 plt.title ("Iris-Setosa PetalWidthCm")
 plt.xlabel("Petal Width in cm")
 plt.ylabel ("Count")
+plt.axvline(DataIS[PW].mean(), color='r', linestyle='dashed', linewidth=1)
+plt.legend("M")
 plt.savefig("Iris_Setosa_PetalWidth")
 plt.show()
 
@@ -239,141 +202,110 @@ plt.hist(DataIVE[SL])
 plt.title ("Iris-Versicolor_ SepalLengthCm")
 plt.xlabel("Sepal Length in cm")
 plt.ylabel ("Count")
+plt.axvline(DataIVE[SL].mean(), color='r', linestyle='dashed', linewidth=1)
+plt.legend("M")
 plt.savefig("Iris_Versicolor__SepalLength")
 plt.show()
 
-plt.hist(DataIVE['SepalWidthCm']) 
+plt.hist(DataIVE[SW]) 
 plt.title ("Iris-Versicolor_ SepalWidthCm")
 plt.xlabel("Sepal Length in cm")
 plt.ylabel ("Count")
+plt.axvline(DataIVE[SW].mean(), color='r', linestyle='dashed', linewidth=1)
+plt.legend("M")
 plt.savefig("Iris_Versicolor__SepalWidth")
 plt.show()
 
-plt.hist(DataIVE['PetalLengthCm']) 
+plt.hist(DataIVE[PL]) 
 plt.title ("Iris-Versicolor_ PetalLengthCm")
 plt.xlabel("Petal Length in cm")
 plt.ylabel ("Count")
+plt.axvline(DataIVE[PL].mean(), color='r', linestyle='dashed', linewidth=1)
+plt.legend("M")
 plt.savefig("Iris_Versicolor__PetalLength")
 plt.show()
 
-plt.hist(DataIVE['PetalWidthCm']) 
+plt.hist(DataIVE[PW]) 
 plt.title ("Iris-Versicolor_ PetalWidthCm")
 plt.xlabel("Petal Width in cm")
 plt.ylabel ("Count")
+plt.axvline(DataIVE[PW].mean(), color='r', linestyle='dashed', linewidth=1)
+plt.legend("M")
 plt.savefig("Iris_Versicolor__PetalWidth")
 plt.show()
 
-
-plt.hist(DataIVI["SepalLengthCm"]) 
-plt.title ("Iris-Versicolor_ SepalLengthCm")
+plt.hist(DataIVI[SL]) 
+plt.title ("Iris-Virginica_ SepalLengthCm")
 plt.xlabel("Sepal Length in cm")
 plt.ylabel ("Count")
-plt.savefig("Iris_Versicolor_SepalLength")
+plt.axvline(DataIVI[SL].mean(), color='r', linestyle='dashed', linewidth=1)
+plt.legend("M")
+plt.savefig("Iris_Virginica_SepalLength")
 plt.show()
 
-plt.hist(DataIVI['SepalWidthCm']) 
+plt.hist(DataIVI[SW]) 
 plt.title ("Iris-Virginica_ SepalWidthCm")
 plt.xlabel("Sepal Length in cm")
 plt.ylabel ("Count")
+plt.axvline(DataIVI[SW].mean(), color='r', linestyle='dashed', linewidth=1)
+plt.legend("M")
 plt.savefig("Iris_Virginica__SepalWidth")
 plt.show()
 
-plt.hist(DataIVI['PetalLengthCm']) 
+plt.hist(DataIVI[PL]) 
 plt.title ("Iris-Virginica_ PetalLengthCm")
 plt.xlabel("Petal Length in cm")
 plt.ylabel ("Count")
+plt.axvline(DataIVI[PL].mean(), color='r', linestyle='dashed', linewidth=1)
+plt.legend("M")
 plt.savefig("Iris_Virginica__PetalLength")
 plt.show()
 
-plt.hist(DataIVI['PetalWidthCm']) 
+plt.hist(DataIVI[PW]) 
 plt.title ("Iris-Virginica PetalWidthCm")
 plt.xlabel("Petal Width in cm")
 plt.ylabel ("Count")
+plt.axvline(DataIVI[PW].mean(), color='r', linestyle='dashed', linewidth=1)
+plt.legend("M")
 plt.savefig("Iris_Virginica_PetalWidth")
 plt.show()
-'''
 
 
-###
-### Number 3:  Create correlation Visualizations
+# Number 3:  Create correlation Visualizations
 
 #1:
 sns.FacetGrid(data, hue="Species", palette="hls", size=5) \
-   .map(plt.scatter, "SepalLengthCm", "SepalWidthCm") \
+   .map(plt.scatter, SL, SW) \
    .add_legend()
-#2:
-sns.FacetGrid(data, hue="Species", palette="hls", size=5) \
-   .map(plt.scatter, "SepalLengthCm", "PetalLengthCm") \
-   .add_legend()
-#3:
-sns.FacetGrid(data, hue="Species", palette="hls", size=5) \
-   .map(plt.scatter, "SepalLengthCm", "PetalWidthCm") \
-   .add_legend()
-#4:
-sns.FacetGrid(data, hue="Species", palette="hls", size=5) \
-   .map(plt.scatter, "SepalWidthCm", "PetalLengthCm") \
-   .add_legend()
- #5:
-sns.FacetGrid(data, hue="Species", palette="hls", size=5) \
-   .map(plt.scatter, "SepalWidthCm", "PetalWidthCm") \
-   .add_legend()
-#6:
-sns.FacetGrid(data, hue="Species", palette="hls", size=5) \
-   .map(plt.scatter, "PetalLengthCm", "PetalWidthCm") \
-   .add_legend()
-
-
-#data.plot(kind="scatter", x="SepalLengthCm", y="SepalWidthCm")
-
-## https://www.kaggle.com/zachgold/python-iris-data-visualizations
-#  One piece of information missing in the plots above is what species each plant is
-# We'll use seaborn's FacetGrid to color the scatterplot by species. That's what 
-# hue="Species" is for in the 1st line below!
-# I've also added a parameter to the FacetGrid function for color palette. Here it's 
-# set to husl.
-
-
-
-
-#below plots a scatter plot of the compelete attributes
-#further explore ways to have two species attributes on one scatter as per link below
-
-#fig, ax = plt.subplots(figsize=(10, 6))
-#ax.scatter(x = data['SepalLengthCm'], y = data['SepalWidthCm'])
-#ax[1].scatter(x = data["PetalLengthCm"], y = data["PetalWidthCm"])
-
-#ax[0].scatter(x = data['SepalLengthCm'], y = data['SepalWidthCm'])
-#ax[0].set_xlabel('SepalLengthCm')
-#ax[0].set_ylabel('SepalWidthCm')
-#ax[1].scatter(x = data["PetalLengthCm"], y = data["PetalWidthCm"])
-#ax[1].set_xlabel("PetalLengthCm")
-#ax[1].set_ylabel("PetalWidthCm")
-
-# print("Correlation Matrix:\n --------------------")
-# corrMatrix = data.corr()
-# print (corrMatrix)
-
-
-# plt.scatter(x, y, marker='o');
-
-#plt.xlabel("SepalLengthCm")
-#plt.ylabel("SepalWidthCm")
-
 plt.show()
 
+#2:
+sns.FacetGrid(data, hue="Species", palette="hls", size=5) \
+   .map(plt.scatter, SL, PL) \
+   .add_legend()
+plt.show()
 
-# https://jakevdp.github.io/PythonDataScienceHandbook/04.02-simple-scatter-plots.html
-#https://stackoverflow.com/questions/43159754/datasets-load-iris-in-python
+#3:
+sns.FacetGrid(data, hue="Species", palette="hls", size=5) \
+   .map(plt.scatter, SL, PW) \
+   .add_legend()
+plt.show()
 
-# this didnt work- may be worth looking further if have time to see if anything uesful
+#4:
+sns.FacetGrid(data, hue="Species", palette="hls", size=5) \
+   .map(plt.scatter, SW, PL) \
+   .add_legend()
+plt.show()
 
-#from sklearn.datasets import load_iris
-#iris = load_iris()
-#features = iris.data.T
-#plt.scatter(features[0], features[1], alpha=0.2,
-            #s=100*features[3], c=iris.target, cmap='viridis')
-#plt.xlabel(iris.feature_names[0])
-#plt.ylabel(iris.feature_names[1]);
+ #5:
+sns.FacetGrid(data, hue="Species", palette="hls", size=5) \
+   .map(plt.scatter, SW, PW) \
+   .add_legend()
+plt.show()
 
-'''
-print ("Hello")
+#6:
+sns.FacetGrid(data, hue="Species", palette="hls", size=5) \
+   .map(plt.scatter, PL, PW) \
+   .add_legend()
+plt.show()
+
