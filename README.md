@@ -33,7 +33,7 @@ https://github.com/pandas-dev/pandas
 
 
 Pands-Project2021
-*****************
+
 
 What is the Fisher Dataset (Wikipedia): 
 The Iris flower data set or Fisher's Iris data set is a multivariate data set introduced by the British statistician, eugenicist, and biologist Ronald Fisher in his 1936 paper The use of multiple measurements in taxonomic problems as an example of linear discriminant analysis.[1] It is sometimes called Anderson's Iris data set because Edgar Anderson collected the data to quantify the morphologic variation of Iris flowers of three related species.
@@ -69,7 +69,7 @@ Research the data set online and write a summary about it in README.
 
 
 analysis.py:
-************
+
 
 The program when run:
 
@@ -90,68 +90,57 @@ The program when run:
 references at end of README
 
 Summary of analysis:
-********************
-********************
+
 
 Review of Histograms:
-********************
+
 
 Iris-Setosa:
-************
-Attribute     Relative_Spread      SkewLeft      Centered      SkewRight     Comment
-*****************************************************************************************
-SepalLength       low                                yes
-SepalWidth        low               yes                                       One outlier
-Petal Length      low               yes                                       one outlier
-Petal Width       low                                 yes                     More variability.Some bins empty
-                                                                              High Precision
+
+Attribute/Relative_Spread/SkewLeft/Centered/SkewRight//Comment
+
+SepalLength/low/no/no//yes//
+SepalWidth/low/no/yes/no//One outlier
+PetalLength/low/no/yes/yes//one outlier
+PetalWidth/low/no/no/yes//More variability.Some bins empty. High Precision
 
 Iris-Versicolor:
-****************
-Attribute     Relative_Spread      SkewLeft      Centered      SkewRight     Comment
-*****************************************************************************************
-SepalLength       high                               yes
-SepalWidth        high               yes                                      
-Petal Length      high               yes                                      
-Petal Width       high                                 yes                  Spread left & right
-                                                                            No measurements at bin at mean value
+
+Attribute/Relative_Spread/SkewLeft/Centered/SkewRight//Comment
+
+SepalLength/high/no/yes/no//
+SepalWidth/high/yes/no/no//                                  
+PetalLength/high/yes/no/no//                                  
+PetalWidth/no/yes/no//high Spread left & right. No measurements at bin at mean value
 
 Iris-Virginica:
-****************
-Attribute     Relative_Spread      SkewLeft      Centered      SkewRight     Comment
-*****************************************************************************************
-SepalLength       med                              yes
-SepalWidth        high                             yes                                      
-Petal Length      med                                            yes                                      
-Petal Width       high                             yes                  
+
+Attribute/Relative_Spread/SkewLeft/Centered/SkewRight//Comment
+
+SepalLength/med/no/yes/no//
+SepalWidth/high/no/yes/no//                                      
+PetalLength/med/no/no/yes//                                      
+PetalWidth/high/no/yes/no//                  
                                                                             
 Review of Correlations:
-***********************
-***********************
 
-Correlation      Iris Setosa      Iris Versicolor      Iris Virginica     Comment
-*********************************************************************************
 
-SW-SL            high corr         med corr            med corr           IVE-IVI Data overlap
-                                                                          IS data separated from IVE-IVI
+Correlation/Iris Setosa/Iris Versicolor/Iris Virginica//Comment
 
-SL-PL            low corr           high corr           high corr         IVE-IVI Data overlap
-                                                                          IS data separated from IVE-IVI       
+SW-SL/high corr/med corr/med corr//IVE-IVI Data overlap. IS data separated from IVE-IVI
 
-SL-PW            low corr           low corr            low corr          IVE-IVI Data overlap
-                                                                          IS data separated from IVE-IVI
+SL-PL/low corr/high corr/high corr//IVE-IVI Data overlap. IS data separated from IVE-IVI       
 
-SW-PL            low corr           low corr            low corr          IVE-IVI Data overlap
-                                                                          IS data separated from IVE-IVI
+SL-PW/low corr/low corr/low corr//IVE-IVI Data overlap//IS data separated from IVE-IVI
 
-SW-PW            low corr           med corr            med corr          IVE-IVI Data overlap
-                                                                          IS data separated from IVE-IVI
+SW-PL/low corr/low corr/low corr//IVE-IVI Data overlap. IS data separated from IVE-IVI
 
-PL-PW            high corr          high corr           high corr         IS to IVE-IVI No Data overlap
-                                                                          IVE-IVI- practically separated
+SW-PW/low corr/med corr/med corr//IVE-IVI Data overlap. IS data separated from IVE-IVI
+
+PL-PW/high corr/high corr/high corr//IS to IVE-IVI No Data overlap. IVE-IVI- practically separated
 
 In summary:
-***********
+
 
 Correlations of the three species using the three measured attributes can be used to diffrentiate from each species.
 The correlations of Iris-Setosa betwwen attribues is relatively weak.  Stronger correlations for Iris Versicolor and Iris Virginica.
@@ -167,7 +156,7 @@ Thus data analysis can be used to analyse measured attribute data for three Iris
 
 
 Project Plan:
-*************
+
 
 adapted from 'How to write an Algorithm'
 
@@ -278,7 +267,7 @@ STEP 4: DEVELOP A HIPO CHART (Hierarchy of Inputs, Processes and Outputs)
     2. Project Summary
 
 23. References:
-***************
+
 
 Python & Iris Dataset:
 https://medium.com/codebagng/basic-analysis-of-the-iris-data-set-using-python-2995618a6342
